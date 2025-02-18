@@ -1,0 +1,109 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    background-color: #1f1f1f;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.episodes-header {
+    background-color: #333;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+
+.episodes-header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.episodes-header p {
+    font-size: 1.5em;
+}
+
+.episodes-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    padding: 30px 20px;
+}
+
+.episode {
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    margin: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.episode:hover {
+    background-color: #444;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.episode h2 {
+    font-size: 2.2em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.episode p {
+    font-size: 1.1em;
+    color: #ddd;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1em;
+    color: #aaa;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ddd;
+}

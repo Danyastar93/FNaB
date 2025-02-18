@@ -1,0 +1,123 @@
+body {
+    background-color: #000; /* Чёрный фон */
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Навигация */
+nav {
+    background: #111;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffcc00;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #ffcc00;
+    color: #000;
+}
+
+/* Заголовок */
+.actors-header {
+    background: linear-gradient(135deg, #222, #444);
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+    border-bottom: 3px solid #ffcc00;
+}
+
+.actors-header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.actors-header p {
+    font-size: 1.5rem;
+    opacity: 0.8;
+}
+
+/* Карточки актёров */
+.actors-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 60px 20px;
+}
+
+.actor {
+    background: #1c1c1c;
+    border-radius: 15px;
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid #333;
+}
+
+.actor:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    border-color: #ffcc00;
+}
+
+.actor img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.actor:hover img {
+    transform: scale(1.05);
+}
+
+.actor h2 {
+    font-size: 1.8rem;
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+.actor p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.5;
+    padding: 10px;
+}
+
+/* Футер (Все права защищены по центру) */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #111;
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 50px;
+}

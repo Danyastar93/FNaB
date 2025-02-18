@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Связаться для идей</title>
+    <link rel="stylesheet" href="contactst.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="fnab.html">Главная</a></li>
+            <li><a href="episodes.html">Серии</a></li>
+            <li><a href="actors.html">Актёры</a></li>
+            <li><a href="contact.html">Связаться</a></li>
+        </ul>
+    </nav>
+
+    <header class="contact-header">
+        <h1>Связаться для идей</h1>
+        <p>Есть идея для FNaБ? Напиши её сюда!</p>
+    </header>
+
+    <section class="contact-form">
+        <!-- Форма отправки данных на Email через FormSubmit -->
+       <form action="https://formsubmit.co/karpenkodanil86@gmail.com" method="POST">
+    <label for="name">Твоё имя:</label>
+    <input type="text" id="name" name="name" placeholder="Введи имя..." required>
+
+    <label for="email">Твой email:</label>
+    <input type="email" id="email" name="email" placeholder="Введи email..." required>
+
+    <label for="idea">Твоя идея:</label>
+    <textarea id="idea" name="idea" placeholder="Опиши свою идею..." required></textarea>
+
+    <!-- Кнопка отправки -->
+    <button type="submit">Отправить</button>
+
+    <!-- После отправки форма будет перенаправлять на эту страницу -->
+    <input type="hidden" name="_next" value="https://Danystar93.github.io/FNaБ/fnab.html">
+	</form>
+    </section>
+
+    <footer>
+        <p>© 2025 FNaБ. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>
