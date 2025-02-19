@@ -37,7 +37,24 @@
     <button type="submit">Отправить</button>
 </form>
 
-<p id="successMessage" style="display: none; color: green;">Спасибо! Ваша идея отправлена.</p>
+<!-- Сообщение об успешной отправке -->
+<div id="successMessage">Спасибо! Ваша идея отправлена.</div>
+
+<style>
+    #successMessage {
+        display: none;
+        position: fixed;
+        top: -50px; /* Начальная позиция за экраном */
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: top 0.5s ease-in-out; /* Плавная анимация */
+    }
+</style>
 
 <script>
 document.getElementById("ideaForm").addEventListener("submit", function(event) {
@@ -52,7 +69,17 @@ document.getElementById("ideaForm").addEventListener("submit", function(event) {
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            document.getElementById("successMessage").style.display = "block";
+            let message = document.getElementById("successMessage");
+            message.style.display = "block";
+            setTimeout(() => {
+                message.style.top = "20px"; // Сообщение плавно выезжает сверху
+            }, 10);
+
+            setTimeout(() => {
+                message.style.top = "-50px"; // Через 3 секунды уезжает обратно
+                setTimeout(() => message.style.display = "none", 500);
+            }, 3000);
+
             document.getElementById("ideaForm").reset();
         } else {
             alert("Ошибка при отправке. Попробуйте снова.");
