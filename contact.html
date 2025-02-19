@@ -24,8 +24,7 @@
 
     <section class="contact-form">
         <!-- Форма отправки данных на Email через FormSubmit -->
-       <form action="https://formsubmit.co/karpenkodanil86@gmail.com" method="POST">
-       <input type="hidden" name="_next" value="contact.html">
+       <form id="ideaForm">
     <label for="name">Твоё имя:</label>
     <input type="text" id="name" name="name" placeholder="Введи имя..." required>
 
@@ -35,10 +34,34 @@
     <label for="idea">Твоя идея:</label>
     <textarea id="idea" name="idea" placeholder="Опиши свою идею..." required></textarea>
 
-    <!-- Кнопка отправки -->
     <button type="submit">Отправить</button>
-	       
-	</form>
+</form>
+
+<p id="successMessage" style="display: none; color: green;">Спасибо! Ваша идея отправлена.</p>
+
+<script>
+document.getElementById("ideaForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Отменяем стандартную отправку формы
+
+    let formData = new FormData(this);
+
+    fetch("https://formsubmit.co/ajax/karpenkodanil86@gmail.com", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            document.getElementById("successMessage").style.display = "block";
+            document.getElementById("ideaForm").reset();
+        } else {
+            alert("Ошибка при отправке. Попробуйте снова.");
+        }
+    })
+    .catch(error => alert("Ошибка сети!"));
+});
+</script>
+
     </section>
 
     <footer>
